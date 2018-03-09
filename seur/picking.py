@@ -1,15 +1,12 @@
 #This file is part of seur. The COPYRIGHT file at the top level of
 #this repository contains the full copyright notices and license terms.
-
 from seur.api import API
-
 from xml.dom.minidom import parseString
 import os
 import datetime
-import genshi
-import genshi.template
+from genshi import template
 
-loader = genshi.template.TemplateLoader(
+loader = template.TemplateLoader(
     os.path.join(os.path.dirname(__file__), 'template'),
     auto_reload=True)
 
